@@ -25,7 +25,7 @@ jobs:
         run: python -m pip install --upgrade pip && pip install -r requirements-dev.txt
 
       - name: Run API tests
-        run: pytest -v
+        run: python -m pytest -v
 
       - name: Build Docker image
         run: docker build -t spambase-api:ci .
